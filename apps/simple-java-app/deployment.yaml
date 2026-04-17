@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: <your-dockerhub-username>/simple-java-app:v1.0
+        image: venkateshdeshpande/simple-java-app:v1.0
         ports:
         - containerPort: 8080
