@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: simple-java-app
+  namespace: argocd
+
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/VenkateshDeshpande28/simple-java-gitops.git
+    targetRevision: HEAD
+    path: apps/simple-java-app
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: simple-java
+
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+``
