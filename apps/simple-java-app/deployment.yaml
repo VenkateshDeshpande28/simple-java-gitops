@@ -18,3 +18,10 @@ spec:
         image: venkateshdeshpande/simple-java-app:v1.1
         ports:
         - containerPort: 8080
+                resources:
+          requests:
+            cpu: "100m"        # 0.1 CPU
+            memory: "128Mi"    # 128 MiB RAM
+          limits:
+            cpu: "500m"        # 0.5 CPU
+            memory: "512Mi"    # 512 MiB RAM
