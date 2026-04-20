@@ -4,7 +4,7 @@ metadata:
   name: simple-java-app
   namespace: simple-java
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: simple-java
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: app
-        image: venkateshdeshpande/simple-java-app:v1.0
+        image: venkateshdeshpande/simple-java-app:v1.1
         ports:
         - containerPort: 8080
